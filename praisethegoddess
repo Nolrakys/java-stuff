@@ -1,0 +1,409 @@
+package chapter1;
+//this is hello world. all it does is make the console print stuff out.
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("hello world");
+		System.out.print(12);
+		System.out.println(12);
+		System.out.print("hello world");
+    System.out.print(12);
+		System.out.print(12);
+	}
+}
+package chapter1;
+//this just makes a window to say what i want
+import javax.swing.JOptionPane;
+
+public class CarlysMotto {
+	public static void main(String[] args) {
+		JOptionPane.showMessageDialog(null,"Carly’s makes the food that makes it a party.");
+	}
+}
+package chapter1;
+
+import javax.swing.JOptionPane;
+
+public class CarlysMotto2 {
+	public static void main(String[] args) {
+		JOptionPane.showMessageDialog(null,"*"
+		+ "********************"
+		+ "***************"
+		+ "******************** \n * Carly’s ma"
+		+ "kes the food t"
+		+ "hat makes it a party. *"
+		+ "\n ***************"
+		+ "*******************"
+		+ "*********************");
+	}
+}
+package chapter2;
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class CarlysEventPrice {
+
+	public static void main(String[] args) {
+		System.out.println("*"
+		+ "***********************************"
+		+ "******************** \n * Carly’s "
+		+ "makes the food that makes it a party. *"
+		+ "\n **********************************"
+		+ "*********************");
+		Scanner input = new Scanner(System.in);
+		System.out.println("How many guests will be attending?");
+		int guests = input.nextInt();
+		int price = 35;
+		int total = price*guests;
+		System.out.println("For "+guests
+		+" guests. The total cost will be "+total+" at the rate of "
+		+price+" per person.");
+		System.out.println("Large event?"+(guests>=50));
+	}
+}
+
+package chapter1;
+import javax.swing.JOptionPane;
+public class SammysMotto {
+	public static void main(String[] args) {
+		JOptionPane.showMessageDialog(null,"Sammy’s makes it fun in the sun.");
+	}
+}
+package chapter1;
+import javax.swing.JOptionPane;
+public class SammysMotto2 {
+	public static void main(String[] args) {
+		JOptionPane.showMessageDialog(null,"S"
+		+ "SSSSSSSSSSSSSSSSSSSSSSSSS \n S Sam"
+		+ "my’s makes it fun in the sun. S \n "
+		+ "SSSSSSSSSSSSSSSSSSSSSSSSSS");
+		//import javax.swing.JOptionPane;
+		//JOptionPane.showMessageDialog(null,
+	}
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+package chapter2;
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class SammyRentalPrice {
+
+	public static void main(String[] args) {
+		//as $40 per hour plus $1 per additional minute.
+		//display the hours, minutes, and total price.
+		System.out.println("S"
+		+ "SSSSSSSSSSSSSSSSSSSSSSSSS \n S Sam"
+		+ "my’s makes it fun in the sun. S \n "
+		+ "SSSSSSSSSSSSSSSSSSSSSSSSSS");
+		Scanner input = new Scanner(System.in);
+		System.out.println("How many minutes have you rented?");
+		int mins = input.nextInt();
+		int hours = mins/60;
+		int price = 40;
+		int min1 = mins%60;
+		int total = (price*hours)+min1;
+		System.out.println("For "+hours
+		+" hours and "+min1+" minutes, at a rate of "+price
+		+" per hour and a dollar a minute, the total rental price is "
+		+ total+".");
+	}
+}
+package chapter5;
+
+public class Card {
+	// TODO Auto-generated method stub
+	//char suit (s for spades, h for hearts, d for diamonds, or c for clubs)
+	private int suit; 
+	private char suite;
+	private int value;
+	final int CARDS_IN_SUIT = 13;
+	//randomly selects two playing cards
+
+	public Card() {
+		value=((int)(Math.random() * 100) % CARDS_IN_SUIT + 1);
+		suit=((int)(Math.random() * 3));
+		if(suit==0) {
+			suite='S';
+		} else if(suit==1) {
+			suite='C';
+		} else if(suit==2) {
+			suite='D';
+		} else if(suit==3) {
+			suite='H';
+		} 
+	}
+	public int getValue() {
+		return value;
+	}
+	public char getSuite() {
+		return suite;
+	}
+
+}
+package chapter5;
+
+public class MyCharacter {
+//color, number of eyes, or number of lives
+	private int eyes; 
+	private String color;
+	private int suit; 
+	private int lives;
+	public MyCharacter() {
+		eyes=((int)(Math.random() * 100));
+		lives=((int)(Math.random()*100)%3);
+		suit=((int)(Math.random() * 3));
+		if(suit==0) {
+			color="Crimson Skin";
+		} else if(suit==1) {
+			color="Perywinkle Scales";
+		} else if(suit==2) {
+			color="Abysal Black Fur";
+		} else if(suit==3) {
+			color="Amarillo Hide";
+		} 
+	}
+	public int getEyes() {
+		return eyes;
+	}
+	public int getLives() {
+		return lives;
+	}
+	public String getColor() {
+		return color;
+	}
+}
+
+package chapter2;
+import javax.swing.JOptionPane;
+import java.util.Scanner;
+
+  //eggs=input.nextInt();
+public class MadLibs {
+
+	public static void main(String[] args) {		
+		Scanner input = new Scanner(System.in);
+		System.out.println("Type a name, 2 nouns, an adjective and a past tense verb. >>");
+		String name = input.nextLine();
+		String noun1 = input.nextLine();
+		String noun2 = input.nextLine();
+		String adj = input.nextLine();
+		String past = input.nextLine();
+		JOptionPane.showMessageDialog(null,name+" had a little "+noun1
+		+"\n"+"Its "+noun2+" was "+adj+" as snow"
+		+"\n"+"And everywhere that "+name+" "+past
+		+"\n"+"The "+noun1+" was sure to go.");
+		}
+
+}
+package chapter2;
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class NumbersDialog {
+	public static void main(String[] args) {
+		TODO Auto-generated method stub
+		int CreditDays = 30;
+		JOptionPane.showMessageDialog(null,""+ CreditDays);
+		JOptionPane.showMessageDialog(null,"Every bill is due in "+CreditDays+" days.");
+		
+		//GetUserName
+		
+	String name;
+	int age;
+	@SuppressWarnings("resource")
+	Scanner inputDevice = new Scanner(System.in);
+	System.out.print("please enter your name >>");
+	name = inputDevice.nextLine();
+	System.out.print("please enter your age >>");
+	age = inputDevice.nextInt();
+	System.out.println("Your name is "+name+" and you are "+age+" years old.");
+	
+	//hellonamedialog
+	String result;
+	result = JOptionPane.showInputDialog(null,"What is your name?");
+	JOptionPane.showMessageDialog(null,"hello"+result+"!");
+	}
+}
+package chapter2;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class RandomGuessMatch {
+
+	public static void main(String[] args) {
+		JOptionPane.showMessageDialog(null,"Hello, please type a number between 1 and 5. ");
+		int random = 1 + (int)(Math.random() * 5);
+		Scanner input = new Scanner(System.in);
+		System.out.println(" ");
+		int guess = input.nextInt();
+		System.out.println("You entered "+guess);
+		boolean right=false;
+		if (random == guess) {
+			right=true;
+		}
+		JOptionPane.showMessageDialog(null,"The number is "+random+" "+right);
+	}
+
+}
+package chapter5;
+
+public class PickTwoCards {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Card card1=new Card();
+		Card card2=new Card();
+		
+		System.out.println("Card 1: "+card1.getValue()+" "+card1.getSuite());
+		System.out.println("Card 2: "+card2.getValue()+" "+card2.getSuite());
+		
+		if (card1.getValue()>card2.getValue()) {
+			System.out.println("Card 1 is higher");
+		} else if (card2.getValue()>card1.getValue()) {
+			System.out.println("Card 2 is higher");
+		} else {
+			System.out.println("Cards are equal");
+		}
+
+	}
+
+}
+package chapter5;
+
+public class TwoCharacters {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyCharacter card1=new MyCharacter();
+		MyCharacter card2=new MyCharacter();
+		
+		System.out.println("Alien 1: "+card1.getEyes()+" Eyes "+card1.getColor()+" "+card1.getLives()+" Lives");
+		System.out.println("Alien 2: "+card2.getEyes()+" Eyes "+card2.getColor()+" "+card1.getLives()+" Lives");
+
+	}
+
+}
+package chapter5;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class RockPaperScissors {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int co = (int)(Math.random() * 2);
+		Scanner input = new Scanner(System.in);
+		//System.out.println("Tie");
+		JOptionPane.showMessageDialog(null,"Hello, please type 0 for rock, 1 for paper and 2 for scissors. ");
+		System.out.println(" ");
+		int guess = input.nextInt();
+		if (guess>2) {
+			System.out.println("invalid Number");
+		}else if (guess==co) {
+			System.out.println("Tie");
+		} else if (guess==0&&co==1||
+				   guess==1&&co==2||
+				   guess==2&&co==0) {
+			System.out.println("Computer wins");
+		} else {
+			System.out.println("Player wins");
+		}
+
+	}
+
+}
+package chapter5;
+
+public class TwoDice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Die die1=new Die();
+		Die die2=new Die();
+		
+		System.out.println("Die 1: "+die1.getValue());
+		System.out.println("Die 2: "+die2.getValue());
+		
+		if (die1.getValue()>die2.getValue()) {
+			System.out.println("Die 1 is higher");
+		} else if (die2.getValue()>die1.getValue()) {
+			System.out.println("Die 2 is higher");
+		} else {
+			System.out.println("Die are equal");
+		}
+
+	}
+
+}
+package chapter5;
+
+public class War {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Card card1=new Card();
+		Card card2=new Card();
+		if (card1.getValue()==card2.getValue()&&card1.getSuite()==card2.getSuite()) {
+			card2=new Card();
+		}
+		
+		System.out.println("Player Card: "+card1.getValue()+" "+card1.getSuite());
+		System.out.println("Computer Card: "+card2.getValue()+" "+card2.getSuite());
+		
+		if (card1.getValue()>card2.getValue()) {
+			System.out.println("Player Wins");
+		} else if (card2.getValue()>card1.getValue()) {
+			System.out.println("Computer Wins");
+		} else {
+			System.out.println("Cards are equal");
+		}
+
+	}
+
+}
+package chapter4;
+
+public class FiveDice {	
+	
+	public static void main(String[] args) {
+		final int NUM_DIE = 5;
+		int i = 0; 
+		int compScore = 0;
+		int dieValue = 0; 
+		Die[] compDie = new Die[NUM_DIE]; 
+		
+		for (i=0; i<NUM_DIE; i++) {			
+			compDie[i] = new Die();			
+			dieValue = compDie[i].getValue(); 
+			compScore += dieValue;
+			compDie[i].value = dieValue; 
+		}
+		Die[] playerDie = new Die[NUM_DIE]; 
+		int playerScore = 0; 
+		
+		
+		for (i=0; i<NUM_DIE; i++) {
+			playerDie[i] = new Die();
+			dieValue = playerDie[i].getValue(); 
+			playerScore += dieValue; 
+			playerDie[i].value = dieValue; 
+		}		
+		
+		System.out.print("Computer dice values: ");
+		for (i=0; i < NUM_DIE; i++) {
+			System.out.print(compDie[i].value + " ");
+		}
+		System.out.println(); 
+		System.out.print("Player dice values: ");
+		for (i=0; i < NUM_DIE; i++) {
+			System.out.print(playerDie[i].value + " ");
+		}
+
+	}		
+}
